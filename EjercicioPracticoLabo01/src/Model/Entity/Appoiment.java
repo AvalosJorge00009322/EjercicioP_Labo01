@@ -11,12 +11,22 @@ public class Appoiment {
     private Doctor doctor;
     private String speciality;
     private Date appointmentDate;
+    private Boolean Attendance;
 
-    public Appoiment(Patient patient, Doctor doctor, String specialty, Date appointmentDate) {
+    public Appoiment(Patient patient, Doctor doctor, String specialty, Date appointmentDate, Boolean attendance) {
         this.patient = patient;
         this.doctor = doctor;
         this.speciality = specialty;
         this.appointmentDate = appointmentDate;
+        this.Attendance = attendance;
+    }
+
+    public Boolean getAttendance() {
+        return Attendance;
+    }
+
+    public void setAttendance(Boolean attendance) {
+        Attendance = attendance;
     }
 
     public Patient getPatient() {

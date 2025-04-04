@@ -10,27 +10,27 @@ public class AppoimentSystem {
 
     private List<Appoiment> appoiments = new ArrayList<>();
 
-    public List<Appoiment> readAppoiments(){
-        if (appoiments.isEmpty()) {
-            System.out.println("No Appoiments.");
-            return null;
-        }
-
-        System.out.println("Appoiments:");
-        for (Appoiment appoiment : appoiments) {
-            System.out.println("Patient: " + appoiment.getPatientName());
-            System.out.println("Doctor: " + appoiment.getDoctorName());
-            System.out.println("Speciality: " + appoiment.getSpeciality());
-            System.out.println("Date: " + appoiment.getAppointmentDate());
-            System.out.println("------------------------------");
-
-        }
-        return null;
+    public void addAppoiment(Appoiment appoiment){
+        appoiments.add(appoiment);
     }
 
     public List<Appoiment> getAppoiments() {
         return appoiments;
     }
+
+    public void readAppoiments(){
+        for (Appoiment appoiment : appoiments) {
+            System.out.println("Paciente: " + appoiment.getPatientName());
+            System.out.println("Doctor: " + appoiment.getDoctorName());
+            System.out.println("Especialidad: " + appoiment.getSpeciality());
+            System.out.println("Fecha: " + appoiment.getAppointmentDate());
+            System.out.println("Asistió: " + appoiment.getAttendance());
+            System.out.println("Código de empleado: " + appoiment.getEmployeeCode());
+            System.out.println("------------------------------");
+        }
+
+    }
+
 
     public void updateAppointmentStatus(Scanner scanner) {
         if (appoiments.isEmpty()) {

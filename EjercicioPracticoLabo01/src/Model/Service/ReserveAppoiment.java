@@ -15,13 +15,15 @@ public class ReserveAppoiment {
 
     private List<Doctor> doctorList;
 
-    public ReserveAppoiment(List<Doctor> doctorList) {
+    private AppoimentSystem appoimentSystem;
+
+    public ReserveAppoiment(List<Doctor> doctorList, AppoimentSystem appoimentSystem) {
         this.doctorList = doctorList;
+        this.appoimentSystem = appoimentSystem;
     }
 
-
-    public Appoiment reserveAppoiment (AppoimentDTO appoimentDTO) {
-        return new Appoiment(
+    public Appoiment reserveAppoiment(AppoimentDTO appoimentDTO) {
+        Appoiment appoiment = new Appoiment(
                 appoimentDTO.getPatientName(),
                 appoimentDTO.getDoctorName(),
                 appoimentDTO.getSpeciality(),
@@ -29,6 +31,8 @@ public class ReserveAppoiment {
                 appoimentDTO.getAttendance(),
                 appoimentDTO.getEmployeeCode()
         );
+        appoimentSystem.addAppoiment(appoiment);
+        return appoiment;
     }
 
 

@@ -12,7 +12,7 @@ public class MainMenu {
     private List<Doctor> doctorList = new ArrayList<>();
     private PatientService patientService = new PatientService();
     private AppoimentSystem appoimentSystem = new AppoimentSystem();
-    private ReserveAppoiment reserveAppoiment = new ReserveAppoiment(doctorList);
+    private ReserveAppoiment reserveAppoiment = new ReserveAppoiment(doctorList, appoimentSystem);
 
 
     public void MainMenu (){
@@ -53,7 +53,7 @@ public class MainMenu {
                     appoimentSystem.readAppoiments();
                     break;
                 case 6:
-                    System.out.println("Ingrese el codigo:");
+                    System.out.println("Ingrese el código:");
                     String doctorCode = scanner.next();
                     findByCode.showAppoimentsByCode(appoimentSystem.getAppoiments(), doctorCode);
                     break;

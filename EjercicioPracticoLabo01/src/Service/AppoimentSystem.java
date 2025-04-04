@@ -9,19 +9,12 @@ import java.util.List;
 
 public class AppoimentSystem {
 
-    private List<Patient> patients = new ArrayList<>();
     private List<Appoiment> appoiments = new ArrayList<>();
-
-    public void addPatient(String name, String lastName, String dui, Date birthday) {
-        Patient newPatient = new Patient(name, lastName, dui, birthday);
-        patients.add(newPatient);
-        System.out.println("Patient " + newPatient.getName() + " was added to the list");
-
-    }
 
     public void readAppoiments(){
         if (appoiments.isEmpty()) {
             System.out.println("No Appoiments.");
+            return;
         }
 
         System.out.println("Appoiments:");

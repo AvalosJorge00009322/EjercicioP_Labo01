@@ -18,6 +18,7 @@ public class MainMenu {
     public void MainMenu (){
         Scanner scanner = new Scanner(System.in);
         DoctorService doctorService = new DoctorService();
+        FindByCode findByCode = new FindByCode();
         int opcion = 0;
 
         do{
@@ -28,7 +29,8 @@ public class MainMenu {
             System.out.println("3. Agregar pacientes");
             System.out.println("4. Agregar citas");
             System.out.println("5. Ver citas");
-            System.out.println("6. Salir");
+            System.out.println("6. Ver citas por codigo");
+            System.out.println("7. Salir");
             System.out.print("Opción: ");
             opcion = scanner.nextInt();
             switch (opcion){
@@ -50,6 +52,11 @@ public class MainMenu {
                     appoimentSystem.readAppoiments();
                     break;
                 case 6:
+                    System.out.println("Ingrese el codigo:");
+                    String doctorCode = scanner.next();
+                    findByCode.showAppoimentsByCode(appoimentSystem.getAppoiments(), doctorCode);
+                    break;
+                case 7:
                     // Salir
                     System.out.println("Saliendo...");
                     return;

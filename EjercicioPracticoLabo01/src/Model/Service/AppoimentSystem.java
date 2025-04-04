@@ -1,10 +1,8 @@
-package Service;
+package Model.Service;
 
 import Model.Entity.Appoiment;
-import Model.Entity.Patient;
 
 import java.util.ArrayList;
-import java.util.Date;
 import java.util.List;
 
 public class AppoimentSystem {

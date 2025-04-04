@@ -1,12 +1,8 @@
-package Model.Entity;
+package Model.DTO;
 
 import java.util.Date;
 
-/**
- * Las citas deben contener: paciente, especialidad, fecha y hora exacta, especialidad, doctor
- *
- **/
-public class Appoiment {
+public class AppoimentDTO {
     private String patientName;
     private String doctorName;
     private String employeeCode;
@@ -14,7 +10,7 @@ public class Appoiment {
     private Date appointmentDate;
     private Boolean attendance;
 
-    public Appoiment(String patientName, String doctorName, String speciality, Date appointmentDate, Boolean attendance, String employeeCode) {
+    public AppoimentDTO(String patientName, String doctorName, String speciality, Date appointmentDate, Boolean attendance, String employeeCode) {
         this.patientName = patientName;
         this.doctorName = doctorName;
         this.speciality = speciality;

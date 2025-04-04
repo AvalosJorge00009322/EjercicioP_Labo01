@@ -9,10 +9,10 @@ public class AppoimentSystem {
 
     private List<Appoiment> appoiments = new ArrayList<>();
 
-    public void readAppoiments(){
+    public List<Appoiment> readAppoiments(){
         if (appoiments.isEmpty()) {
             System.out.println("No Appoiments.");
-            return;
+            return null;
         }
 
         System.out.println("Appoiments:");
@@ -24,6 +24,11 @@ public class AppoimentSystem {
             System.out.println("------------------------------");
 
         }
+        return null;
+    }
+
+    public List<Appoiment> getAppoiments() {
+        return appoiments;
     }
 
 }

@@ -70,4 +70,5 @@ public class Appoiment {
     public void setAttendance(Boolean attendance) {
         this.attendance = attendance;
     }
+
 }

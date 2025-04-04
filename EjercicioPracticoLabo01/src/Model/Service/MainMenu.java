@@ -30,7 +30,8 @@ public class MainMenu {
             System.out.println("4. Agregar citas");
             System.out.println("5. Ver citas");
             System.out.println("6. Ver citas por codigo");
-            System.out.println("7. Salir");
+            System.out.println("7. Actualizar estado de cita");
+            System.out.println("8. Salir");
             System.out.print("Opción: ");
             opcion = scanner.nextInt();
             switch (opcion){
@@ -57,6 +58,10 @@ public class MainMenu {
                     findByCode.showAppoimentsByCode(appoimentSystem.getAppoiments(), doctorCode);
                     break;
                 case 7:
+                    System.out.println("Acutalizar estado:");
+                    appoimentSystem.updateAppointmentStatus(scanner);
+                    break;
+                case 8:
                     // Salir
                     System.out.println("Saliendo...");
                     return;

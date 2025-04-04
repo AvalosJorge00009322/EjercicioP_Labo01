@@ -17,8 +17,8 @@ public class AppoimentSystem {
 
         System.out.println("Appoiments:");
         for (Appoiment appoiment : appoiments) {
-            System.out.println("Patient: " + appoiment.getPatient().getName() + " " + appoiment.getPatient().getLastName());
-            System.out.println("Doctor: " + appoiment.getDoctor().getName() + " " + appoiment.getDoctor().getLastName());
+            System.out.println("Patient: " + appoiment.getPatientName());
+            System.out.println("Doctor: " + appoiment.getDoctorName());
             System.out.println("Speciality: " + appoiment.getSpeciality());
             System.out.println("Date: " + appoiment.getAppointmentDate());
             System.out.println("------------------------------");

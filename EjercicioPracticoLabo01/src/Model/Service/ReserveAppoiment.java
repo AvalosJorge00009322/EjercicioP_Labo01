@@ -45,7 +45,7 @@ public class ReserveAppoiment {
         while (!validInput){
             System.out.println("Ingrese los datos de la cita:");
             patientName = getValidName(scanner, "Nombre del paciente: ");
-            doctorName = getValidName(scanner, "Nombre del doctor: ");
+            doctorName = getValidDoctor(scanner, "Nombre del doctor: ");
             appoimentDate = getValidDate(scanner, "Fecha de la cita (dd/MM/yyyy) HH:mm : ");
             speciality = getDoctorSpeciality(doctorName);
             employeeCode = getDoctorEmployeeCode(doctorName);

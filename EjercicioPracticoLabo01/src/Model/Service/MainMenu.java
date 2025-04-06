@@ -31,7 +31,8 @@ public class MainMenu {
             System.out.println("5. Ver citas");
             System.out.println("6. Ver citas por codigo");
             System.out.println("7. Actualizar estado de cita");
-            System.out.println("8. Salir");
+            System.out.println("8. Boton extraño pero muy interesante");
+            System.out.println("9. Salir");
             System.out.print("Opción: ");
             opcion = scanner.nextInt();
             switch (opcion){
@@ -62,6 +63,10 @@ public class MainMenu {
                     appoimentSystem.updateAppointmentStatus(scanner);
                     break;
                 case 8:
+                    // Salir
+                    System.out.println("Explotando zaun....");
+                    break;
+                case 9:
                     // Salir
                     System.out.println("Saliendo...");
                     return;
